@@ -1,0 +1,1122 @@
+@charset "UTF-8";
+/*durée de l'animation spinner ouverture page acceuil */
+/* Délai du retart de l'animation spinner */
+/* durée du spinner */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+/* déclarationdes constantes */
+:root{
+--taille_min:min(8vw, 8vh);
+--taille_cadran:min(20vw, 20vh);
+--taille_chapitre_v: var(--taille_min); 
+--taille_chapitre_h: var(--taille_min);
+--taille_min2:min(10vw,10vh);
+ 
+--taille_chapitre_v: var(--taille_min2); 
+--taille_chapitre_h: var(--taille_min2);
+}
+:root{--Diam_Cadran:var(--taille_cadran);} 
+
+body { /*desktop */
+ /* display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 50px;
+  justify-content: space-around;
+  background-attachment: fixed;
+  border: 2px green;*/
+  width: 100%;
+ /* margin: auto;*/ 
+  height: 100%;
+}
+.Entete{
+
+  width:100%;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  height: 75%;
+  width: 100%;
+  overflow: auto;
+}
+ 
+#Salarme{
+/*border:5px ridge #402040;
+background-color: rgb(41, 111, 137);*/
+  background-image: url("../images_radio/Ciel_etoile.jpg");
+   background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+         
+/*border:5px ridge #402040;
+background-color: rgb(41, 111, 137);*/
+height:101%;
+width: 60%;
+}	
+
+ 
+#sonnerie1{
+height:10px;
+width:10px;
+font-size: 1px; 
+background-color:#fc0612;
+border-radius:10px; 
+}
+#Champs_alarm{
+display:flex;
+flex-direction: column;
+max-width: 100%;
+}
+/*.cph{
+display: flex;
+flex-direction: row;
+align-items: center;
+}*/
+#Date_du_jour{
+font-size:2vw;;
+color:blue;
+width:70%; 
+}
+
+#jour_sem{
+font-size:2vw;
+color:blue;
+}
+#Clock{
+display:flex;
+flex-direction:row;
+width: 100%;
+}
+
+
+ #HeureActuelle{
+    font-size:2vw;;
+    color:blue;
+	width:37%;
+  }
+.heure-alarm{
+color:#EEE;
+background-color:rgb(41, 111, 137);
+}
+.zen {
+        display: flex;
+        flex-direction: column;
+        height:100%;
+       /* background-image: url("../images/Acceuil/Chemin de vie.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;*/
+    }
+.Horloge{
+display: flex;
+height: 50%;
+width:50%;
+flex-direction: column;
+ align-items: center;
+background-image: url("../images/Ciel_etoile.jpg");
+background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+}    
+.Couverture_int {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  /*padding:5px;*/
+  /*margin:1%*/
+  border: 10px solid rgb(113, 59, 214);
+}
+
+.Couverture_ext {
+  display: flex;
+  border: 12px solid rgb(15, 148, 97);
+  padding: 10px;
+  text-align: center;
+  height: 100%;
+   background-image: url(../images_radio/texture-paper.png); 
+}
+
+.Couverture_int_image {
+  display: flex;
+  justify-content: center;
+  border-radius: 25px;
+  zoom: 1.1;
+  box-shadow: 13px 13px 10px rgb(20, 15, 43);
+  animation: battement 2s; /* durée de l'animation 5 secondes  retard 100mx  */
+  animation-timing-function: linear;
+  animation-iteration-count: 2;
+}
+p{
+padding:5px;
+margin:5px;
+} 
+h1 {
+  font-family: VagRounded;
+  color: deeppink;
+}
+
+h2 {
+  display: flex;
+  font-family: VagRounded;
+  padding: 2px;
+  margin: 2px;
+  color: deeppink;
+  align-items: center;
+}
+
+
+h3 {
+  font-family: VagRounded;
+  color: deeppink;
+  font-size: 20px;
+}
+h3.Justifie {
+  align-items: center;
+}
+h3.top {
+  margin-top: 5%;
+}
+
+header {
+  display: flex;
+  flex-wrap: nowrap;
+  
+  width: 100%;
+  height:10%;
+  align-items: center;
+  background-image: url(../images_radio/texture-paper.png);
+}
+
+footer {
+  display: flex;
+  height: 15%;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  background-color: rgb(170, 146, 201);
+}
+.URL{
+  font-size: 40px;
+}
+.list_R{
+ display:flex;
+ flex-direction: column;
+height:0.5*var(--taille_min);
+width:0.5*var(--taille_min);
+
+/*justify-content: flex-start;*/
+ justify-content: space-around;   
+ width:15%;
+}
+
+#image {
+  
+  justify-content:space-around;
+}
+
+.ON_AIR{
+	display:flex;
+	flex-direction:column;
+  
+  height: 100%;
+  align-items: center;
+}
+
+*/
+
+
+.Bouton1 {
+  background: linear-gradient(180deg, fuchsia, #9356DC 35%, #FF79DA 100%);
+  margin: 2%;
+  height: 40px;
+  width: 100px;
+  text-align: center;
+  border-radius: 25px;
+  border: none;
+  color: white;
+  font-family: "Roboto", "Arial", "sans-serif";
+  font-weight: bold;
+  font-size: 13px;
+  box-shadow: 5px 5px 10px #cccccc;
+  /*margin-top: 10px;
+  margin-bottom: 10px;*/
+  margin-right: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.Bouton1:hover {
+  background: linear-gradient(0deg, #9356DC, #FF79DA 35%, #8f2e8f 100%);
+}
+.Bouton1:active {
+  /*transform:scale(0.5);*/
+  transition: transform 50ms ease-in-out;
+  transform: scale(0.9);
+  box-shadow: 20px 10px 20px rgba(191, 192, 191, 0.8823529412);
+  background: linear-gradient(10deg, #30df79 0%, #30df79 35%, #30df79 100%);
+  background: linear-gradient(0deg, #9356DC, #FF79DA 905%, #8f2e8f 100%);
+}
+
+.text_invisible {
+  visibility: hidden;
+}
+
+
+
+#Fond_gris {
+  width: 100%;
+  height: 20%;
+  background-color: rgb(121, 149, 184);
+}
+.Volume{
+ height:30px;
+ width:30px;
+ background-color: rgb(177, 3, 212);
+ border-radius:15px ;
+ font-size: 150%;
+ text-align: center; 
+ color: none;
+ box-shadow: 10px 10px 15px rgb(95, 75, 173);
+ /*padding-bottom: 4px;*/
+}
+.Volume:active{
+ box-shadow: 3px 3px 5px rgb(95, 75, 173);
+ transform: scale(0.8);
+}
+.control_Play_stop{
+ height:40px;
+ width:40px;
+ background-color: rgb(45, 212, 3);
+ border-radius:15px ;
+ font-size: 100%;
+ margin-left: 2%; 
+ padding-bottom: 4px;
+box-shadow: 10px 10px 15px rgb(95, 75, 173);
+
+}
+.control_Play_stop:active{
+  box-shadow: 3px 3px 5px rgb(95, 75, 173);
+ transform: scale(0.8);
+}
+
+.Bouton_Gestion_Son{
+  display:flex;
+  flex-direction: row;
+ align-items: center;
+ /*width: 50vw;*/
+ 
+}
+ 
+#Vol_son{
+ /* width: 30px;
+  height:30px;*/
+  padding-left:5px;
+  padding-right:5px;
+}
+#Vol_son p{
+    font-size: 5px;
+  }
+.fa-solid{
+  color:#000;
+ 
+}  
+  
+#Nom_Radio{
+ padding-top: 3px;
+  color: #b3c25c;
+  font-size: 30px;
+}
+figure{
+   
+  height:50%;
+  
+}
+/* ------------gestion curseur -----------*/
+input {
+  --c: rgb(87, 97, 230); /* active color */
+  --l: 8px; /* line thickness*/
+  --h: 80px; /* thumb height */
+  --w: 24px; /* thumb width */
+  
+  width: 50%;
+  height: var(--h); /* needed for Firefox*/
+  --_c: color-mix(in srgb, var(--c), #000 var(--p,0%));
+  -webkit-appearance :none;
+  -moz-appearance :none;
+  appearance :none;
+  background: none;
+  cursor: pointer;
+  overflow: hidden;
+}
+input:focus-visible,
+input:hover{
+  --p: 25%;
+}
+
+/* chromium */
+input[type="range" i]::-webkit-slider-thumb{
+  height: var(--h);
+  width: var(--w);
+  background: var(--_c);
+  border-image: linear-gradient(90deg,var(--_c) 50%,#940909 0) 1/0 100vw/0 100vw;
+  clip-path:
+    polygon(
+       0     calc(50% + var(--l)/2),
+      -100vw calc(50% + var(--l)/2),
+      -100vw calc(50% - var(--l)/2),
+       0     calc(50% - var(--l)/2),
+       0 0,100% 0,
+       100%  calc(50% - var(--l)/2),
+       100vw calc(50% - var(--l)/2),
+       100vw calc(50% + var(--l)/2),
+       100%  calc(50% + var(--l)/2),
+       100% 100%,0 100%);
+  -webkit-appearance: none;
+  appearance: none;
+  transition: .3s;
+  height: 30px;
+}
+/* Firefox */
+input[type="range"]::-moz-range-thumb {
+  height: var(--h);
+  width: var(--w);
+  background: var(--_c);
+  border-image: linear-gradient(90deg,var(--_c) 50%,#97084f 0) 1/0 100vw/0 100vw;
+  clip-path:
+    polygon(
+       0     calc(50% + var(--l)/2),
+      -100vw calc(50% + var(--l)/2),
+      -100vw calc(50% - var(--l)/2),
+       0     calc(50% - var(--l)/2),
+       0 0,100% 0,
+       100%  calc(50% - var(--l)/2),
+       100vw calc(50% - var(--l)/2),
+       100vw calc(50% + var(--l)/2),
+       100%  calc(50% + var(--l)/2),
+       100% 100%,0 100%);
+  -webkit-appearance: none;
+  appearance: none;
+  transition: .3s;
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+#Pause{
+  height:40px;
+  width:40px;
+  padding-bottom:0px;
+  border-radius: 20px; 
+}
+/* bouton cast*/
+   
+#Btn_Cast {
+  transition: all 0.3s ease;
+  color:white;
+  background-color: transparent;
+  /*: 2px solid #ddd;*/
+  border:none;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-left:20px;
+  flex-wrap: nowrap;
+}
+
+#Btn_Cast:hover {
+   color: #6719cc;
+  border-color: #6719cc;
+}
+.fa-chromecast{
+  font-size: 40px;
+}
+#Btn_Cast.casting-active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-color: #667eea;
+  color: white;
+  box-shadow: 0 0 10px rgba(102, 126, 234, 0.5);
+}
+.Banniere_Image_ecoute {
+    width: 60%;
+    height: 60%;
+    margin-top: 20px; 
+    object-fit: cover;
+  }
+
+ .Banniere_Image_footer{
+width:80%;
+ height:70%;
+object-fit:contain;
+margin-top: 0px;
+margin-left: 20px;
+ }
+ .fa-volume-high{
+  font-size: 2vh;
+  color:white;
+ }
+
+ #Vol_son{
+   font-size: 30px;
+   color:white;
+ }
+@supports not (color: color-mix(in srgb,red,red)) {
+  input {
+    --_c: var(--c);
+  } 
+}
+
+
+
+
+.nounderline{
+  height:5px;
+}
+
+
+.son_controle{
+display:flex;
+flex-direction: column; 
+  flex-grow:3;  
+justify-content: space-around;
+align-items: center;
+height:50%;
+}
+ .colonne_son{
+display: flex;
+flex-direction: column; 
+ 
+justify-content: space-around;
+align-items: center;
+
+/*flex-grow:2;*/
+height:40px;
+width:50vw; 
+ 
+
+
+}
+#source{
+
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction:row;
+  align-items: center;
+ /* width:50vw;*/
+ height:5px;
+}
+
+
+/* fin media 500px */
+
+
+@font-face {
+  font-family: "Shrikhand";
+  src: url("../polices/Shrikhand-Regular.otf") format("OPENtype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../polices/Roboto-Bold.ttf") format("TrueYype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../polices/Roboto-Regular.ttf") format("TrueYype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../polices/Roboto-Regular.ttf") format("TrueYype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "VAGRounded";
+  src: url("../polices/VAGRoundedBT-Regular.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "VAGRounded_Bold";
+  src: url("../polices/VAG Rounded Bold.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "cac_champagne";
+  src: url("../polices/cac_champagne-webfont.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+/* animtionbattement de coeur */
+
+.footer_chapitre{
+background-image:c ;
+}
+
+
+
+
+ 
+
+ 
+
+
+
+
+._sommaire {
+  display: flex;
+ /* flex-wrap: wrap;*/
+  flex-direction: row;
+  font-family: VagRounded;
+  padding: 5px 10px 5px 10px;
+  
+  font-size: 30px;
+   width:100%; 
+  height:50%;
+  justify-content:space-between;
+   background-image: url("../images_radio/Ciel_etoile.jpg");
+   background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+} /* Fin css sommaire */
+
+
+.Centre {
+  width: 100%;
+}
+
+.Banniere_Image { /*  Banniere image hotel 1 */
+  width: var(--taille_min)*0.5;
+  height: var(--taille_min)*0.5; 
+
+ /* border:1px rgb(226, 33, 49) solid; */
+  margin-bottom: 0px;
+   
+   
+  /*object-fit:contain;*/
+}
+
+.Chapitre {
+  /*    border:1px rgb(206, 137, 35) solid; */
+  flex-direction: column;
+ height: var(--taille_min);
+    width:var(--taille_min);
+  margin:auto;
+  background-color: #d3adad;
+  background: url("../images_radio/Acceuil/ciel_noir.webp");
+  border-radius: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 10px;
+  color: deeppink;
+  box-shadow: 3px 3px 10px rgb(38, 9, 168);
+}
+.Chapitre:hover {
+  background: linear-gradient(0deg, #9356DC, #FF79DA 35%, rgb(143, 46, 143) 100%);
+  /*background: url("../images/neige.png");*/
+}
+.Chapitre:hover h3 {
+  color: rgb(36, 26, 163);
+}
+.Chapitre:active {
+  /*transform:scale(0.5);*/
+  transition: transform 50ms ease-in-out;
+  transform: scale(0.9);
+  box-shadow: 20px 10px 20px rgba(191, 192, 191, 0.8823529412);
+  animation-duration: 10s;
+  /*opacity: 0;*/
+}
+
+.footer_chapitre {
+  display: flex;
+  flex-direction: row;
+     width: 100%;
+     height: 100%;
+     background-image:url("../images_radio/Ciel_etoile.jpg");
+     object-fit: contain;
+}
+.footer_chapitre:nth-child(1)
+{
+    flex: 2;
+}
+.footer_chapitre:nth-child(2)
+{
+    flex: 1;
+}
+
+
+
+
+
+
+
+#curseur {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: green;
+  border-radius: 50%;
+  border: 2px solid #000;
+  transform: translate(-50%, -50%);
+}
+
+
+
+.Banniere_Image { /*  Banniere image  */
+   width:  var(--taille_min);
+  height: var(--taille_min);
+  /*border:1px rgb(226, 33, 49) solid; */
+  margin-bottom: 0px;
+   
+  /*object-fit: cover;*/
+}
+
+
+.droite {
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  font-size: 20px;
+     width: 90%;
+    margin-left: 5%;
+}
+
+body { /*desktop */
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 50px;
+  justify-content: space-around;
+  background-attachment: fixed;
+  border: 2px green;
+  width: 100%;
+  margin: auto;
+  height: 100%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+ 
+  overflow: auto;
+}
+
+
+
+
+
+h1 {
+  font-family: VagRounded;
+  color: deeppink;
+  font-size:45px ;
+}
+
+
+header {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+   
+  align-items: center;
+  background-image: url(../images_radio/texture-paper.png);
+}
+
+
+
+#image {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+
+.Bouton1 {
+  background: linear-gradient(180deg, fuchsia, #9356DC 35%, #FF79DA 100%);
+  margin: 2%;
+  height: 2vh;
+  width: 10vw; 
+  text-align: center;
+  border-radius: 25px;
+  border: none;
+  color: white;
+  font-family: "Roboto", "Arial", "sans-serif";
+  font-weight: bold;
+  font-size: 25px;
+  box-shadow: 5px 5px 10px #cccccc;
+  /*margin-top: 10px;
+  margin-bottom: 10px;*/
+  margin-right: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.Bouton1:hover {
+  background: linear-gradient(0deg, #9356DC, #FF79DA 35%, #8f2e8f 100%);
+}
+.Bouton1:active {
+  /*transform:scale(0.5);*/
+  transition: transform 50ms ease-in-out;
+  transform: scale(0.9);
+  box-shadow: 20px 10px 20px rgba(191, 192, 191, 0.8823529412);
+  background: linear-gradient(10deg, #30df79 0%, #30df79 35%, #30df79 100%);
+  background: linear-gradient(0deg, #9356DC, #FF79DA 905%, #8f2e8f 100%);
+}
+/* gestion partie horloge      */ 
+.ligne{
+position: relative;
+display:flex;
+flex-direction:row;
+align-items:center;
+padding:5px;
+/*margin-left:5px;*/
+/*border:2px ridge #202040;*/
+width:75%;
+background-image:url("Ciel_etoile.jpg"); 
+}
+.Horloge{    /* remplace my form*/
+display:flex;
+width: 40%; 
+ 
+justify-content: space-around;
+border:2px ridge #202040;
+background-image: url("../images_radio/Ciel_etoile.jpg");
+padding: 00px;
+/*border:5px double #c12629;*/
+background-color: #bad;
+ 
+height: 100%;
+
+}
+#Choix_Type_Cadran{
+display: flex;
+flex-direction: column;
+width:20%;
+height: 100%;
+
+}
+.Bt_stop{
+ height:25px;
+ width:25px;
+ background-color: rgb(197, 194, 169);
+ border-radius:12px ;
+ font-size: 10px;
+ padding-left: 4px;
+}
+.Bouton_chx_Horloge{
+Display:flex;
+flex-direction: column;
+
+opacity:0;
+width:60px;
+height:110px;
+border:1px ridge #402040;
+margin:2% 0% 2% 0%;
+
+}
+.Bouton_chx_Horloge:hover{
+  height:auto;
+  animation-duration:235ms;
+   Animation-name:Fondu;
+  opacity:1;
+
+} 
+.setAlarm{
+position:absolute;
+left:10px;  
+top:10px;
+Width:30px;
+Height:30px;
+background-color: #97084f;
+&:active +.Bouton_chx_Horloge{  
+Animation-name:Fondu;
+ animation-duration:235ms;
+  opacity:1;
+}
+
+}
+ @keyframes Fondu{
+    from{opacity:0.1;}
+    50%{opacity:0.3;}
+    to{opacity:1;}
+}
+
+.Btn_h{
+width:4vw;
+height:4vh;
+border:2px ridge #304040;
+margin-top: 15px;
+padding: 10px;
+}
+
+.timer{
+  display:flex;
+  flex-direction: row;
+  width:100%;
+  height:50%;
+}   
+/* ------------gestion curseur -----------*/
+input {
+  --c: rgb(87, 97, 230); /* active color */
+  --l: 8px; /* line thickness*/
+  --h: 30px; /* thumb height */
+  --w: 12px; /* thumb width */
+   
+  width: 85%;
+  height: var(--h); /* needed for Firefox*/
+  --_c: color-mix(in srgb, var(--c), #000 var(--p,0%));
+  -webkit-appearance :none;
+  -moz-appearance :none;
+  appearance :none;
+  background: none;
+  cursor: pointer;
+  overflow: hidden;
+}
+input:focus-visible,
+input:hover{
+  --p: 25%;
+}
+
+/* chromium */
+input[type="range" i]::-webkit-slider-thumb{
+  height: var(--h);
+  width: var(--w);
+  border-radius:15px;
+  background: var(--_c);
+  border-image: linear-gradient(90deg,var(--_c) 50%,#940909 0) 1/0 100vw/0 100vw;
+  clip-path:
+    polygon(
+       0     calc(50% + var(--l)/2),
+      -100vw calc(50% + var(--l)/2),
+      -100vw calc(50% - var(--l)/2),
+       0     calc(50% - var(--l)/2),
+       0 0,100% 0,
+       100%  calc(50% - var(--l)/2),
+       100vw calc(50% - var(--l)/2),
+       100vw calc(50% + var(--l)/2),
+       100%  calc(50% + var(--l)/2),
+       100% 100%,0 100%);
+  -webkit-appearance: none;
+  appearance: none;
+  transition: .3s;
+}
+/* Firefox */
+input[type="range"]::-moz-range-thumb {
+  height: var(--h);
+  width: var(--w);
+  background: var(--_c);
+  border-radius:var(--br);
+  border-image: linear-gradient(90deg,var(--_c) 50%,#97084f 0) 1/0 100vw/0 100vw;
+  clip-path:
+    polygon(
+       0     calc(50% + var(--l)/2),
+      -100vw calc(50% + var(--l)/2),
+      -100vw calc(50% - var(--l)/2),
+       0     calc(50% - var(--l)/2),
+       0 0,100% 0,
+       100%  calc(50% - var(--l)/2),
+       100vw calc(50% - var(--l)/2),
+       100vw calc(50% + var(--l)/2),
+       100%  calc(50% + var(--l)/2),
+       100% 100%,0 100%);
+  -webkit-appearance: none;
+  appearance: none;
+  transition: .3s;
+}
+.control_Play_stop{
+ height:30px;
+ width:30px;
+ background-color: rgb(95, 212, 3);
+ border-radius:15px ;
+ font-size: 100%;
+ margin-left: 2%; 
+ padding-bottom: 4px;
+box-shadow: 10px 10px 15px rgb(95, 75, 173);
+
+}
+.control_Play_stop:active{
+  box-shadow: 3px 3px 5px rgb(95, 75, 173);
+ transform: scale(0.8);
+}
+@supports not (color: color-mix(in srgb,red,red)) {
+  input {
+    --_c: var(--c);
+  } 
+}
+.SJour-sem{
+  display:flex;
+flex-direction: row;
+ margin-left: 10px;
+ margin-bottom: 20px;
+ justify-content: space-around;
+}
+.H_Alarm_sem{
+display:flex;
+flex-direction: row;
+ margin-left: 10px;
+justify-content: space-around;
+}
+.Radio_Alarm_sem{
+display:flex;
+flex-direction: row;
+ margin-left: 10px;
+ justify-content: space-around;
+
+}
+
+.heure_Alarm_j{
+font-size: 10px;
+width:40px;
+padding:0px;
+margin:2px;
+justify-content: space-between;
+}
+.jour_sem{
+height:30px;
+width:40px;
+font-size: 20px;
+text-align:center;
+background-color: rgb(158, 153, 153);
+}
+.Radio_Alarm_j{
+font-size: 10px;
+width:40px;
+padding:0px;
+margin:2px;
+
+}
+#RadioR{
+  font-size: 20px;
+}
+#RadioS{
+  font-size: 20px;
+}
+#audioPlayer{
+height:5vh;
+width:30vw;
+}
+/* Fin gestion partie horloge      */ 
+ @media (orientation: landscape)  /* ---------orientation horizontale --------------*/
+  {
+.timer{
+  display:flex;
+  flex-direction: column;
+   width: 50%;
+  height: 100%;
+}   
+
+.Bouton1{
+  height: 5vh;
+  width: 10vw; 
+}
+#Salarme{
+/*border:5px ridge #402040;
+background-color: rgb(41, 111, 137);*/
+height:50%;
+width: 100%;
+}
+.list_R{   
+        
+        flex-direction: row;
+       
+        height: 0.5*var(--taille_min2);
+        width:0.5*var(--taille_min2);
+         /*   margin-right: 10px;
+    margin-bottom: 40px;*/
+       /* justify-content: flex-start;*/
+        justify-content: space-around;
+     
+}
+.zen {
+        display: flex;
+        flex-direction: row;
+        height:100%;
+       /* background-image: url("../images/Acceuil/Chemin de vie.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;*/
+    }
+.Horloge{
+ 
+display: flex;
+align-items: center;
+height: 50%;
+width:100%;
+} 
+._sommaire{
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width:50%;
+  height:99%;
+  justify-content: space-around;
+}
+.Chapitre{
+  margin-left: auto;
+      height: var(--taille_min2);
+    width:  var(--taille_min2);
+    align-items: center;
+    
+}
+
+.Banniere_Image {
+    width: 100%;
+    height: 100%;
+}
+
+.ON_AIR{
+  flex-direction: row;
+  
+}
+.colonne_son {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+   
+     width: 20vw; 
+
+}    
+.son_controle{
+  flex-direction: row;
+   
+  align-items: center;
+  justify-content: space-around;
+    height:100%;
+}
+#source{
+  height:100%;
+  width:30vw;
+}
+#Btn_Cast{
+  width:10vw;
+}
+#audioPlayer{
+   margin-left: 20px; 
+  height: 50%;
+  align-items: center;
+  width:50%;  
+}
+.ligne{
+  width:100%;
+  height:50%
+}
+
+
+
+
+  }
