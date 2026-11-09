@@ -73,13 +73,13 @@ flex-direction: row;
 align-items: center;
 }*/
 #Date_du_jour{
-font-size:2vw;;
+font-size:4vw;;
 color:blue;
 width:70%; 
 }
 
 #jour_sem{
-font-size:2vw;
+font-size:4vw;
 color:blue;
 }
 #Clock{
@@ -90,7 +90,7 @@ width: 100%;
 
 
  #HeureActuelle{
-    font-size:2vw;;
+    font-size:4vw;;
     color:blue;
 	width:37%;
   }
