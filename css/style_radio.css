@@ -292,7 +292,6 @@ width:0.5*var(--taille_min);
 }
 .Bouton3 {
   background: linear-gradient(180deg, fuchsia, #9356DC 35%, #FF79DA 100%);
-  margin: 2%;
   height: 40px;
   width: 100px;
   text-align: center;
@@ -303,10 +302,8 @@ width:0.5*var(--taille_min);
   font-weight: bold;
   font-size: 13px;
   box-shadow: 5px 5px 10px #cccccc;
-  /*margin-top: 10px;
-  margin-bottom: 10px;*/
-  margin-right: 10px;
-  margin-top: 20px;
+  margin-right: 40px;
+  margin-top: '0px;
   cursor: pointer;
   vertical-align: middle;
 }
