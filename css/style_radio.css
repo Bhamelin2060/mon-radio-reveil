@@ -44,11 +44,12 @@ main {
 border:5px ridge #402040;
 background-color: rgb(41, 111, 137); 
  position:absolute;
-  top: 60px;
-    left: 120px;
+  top: 200px;
+    left: 50px;
     height: 51%;
     width: 50%;
-opacity:0;
+    z-index: -1;
+
 }
 
  
