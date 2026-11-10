@@ -423,7 +423,7 @@ box-shadow: 10px 10px 15px rgb(95, 75, 173);
  /*transform: scale(0.8);*/
 }
 select {
-    width: 200px;
+    width: 70%;
      
 }
 @supports not (color: color-mix(in srgb,red,red)) {
