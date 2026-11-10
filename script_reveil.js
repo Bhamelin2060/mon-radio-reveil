@@ -455,7 +455,7 @@ var H_Alarmj=tab_alarm_sel[parseInt(js)];         // alarme programmée pour la 
 //console.log(parseInt(H_Alarmj.substring(5,3)));
 // console.log("Test=",hh==parseInt(H_Alarme1.substring(0,2)) && mn==parseInt(H_Alarme1.substring(5,3)) && ss==0  &&  tab_alarm_sel[parseInt(js)]==1)
 // console.log(hh==parseInt(H_Alarmj.substring(0,2)) && mn==parseInt(H_Alarmj.substring(5,3)) && ss==0 && tab_statut_alarm_sel[parseInt(js)]==1)
-  
+  if(H_Alarmj!==0){
 	if (hh==parseInt(H_Alarmj.substring(0,2)) && mn==parseInt(H_Alarmj.substring(5,3)) && ss==0 && tab_statut_alarm_sel[parseInt(js)]==1 && AlarmOFF.innerText=="On"){
 //	Alswitch1.style.backgroundColor="RGB(100,241,39)"; // VERT
 
@@ -478,6 +478,7 @@ var trackUrl_R=Tab_radio[tab_radio_alarm_sel[parseInt(js)]][1];
 
     initAudio (trackUrl_R)
 }
+  }
 // -----------fonction cadran de nuit-------------- 
  //console.log("hh=",hh,"mn=",mn ,"ss=",ss)
 if(hh==23 && mn==0){
@@ -615,12 +616,15 @@ if (mn==0 && ss==0){  //    if (mn==0 && ss==0)  on est à l'heure pile
      Taux_scale=1;
 //  ---- gestion du menu alarme -------------
  Bouton2.addEventListener("click", () => {
-  menu_alarme.style.opacity= 1;     
-
+  //menu_alarme.style.opacity= 1;     
+  menu_alarme.style.zIndex=1;
+ 
 });
 // fermeture du menu alarm
     	Bouton3.addEventListener("click", () => {
-  menu_alarme.style.opacity= 0;   
+  menu_alarme.style.zIndex=-1;
+  
+  //      menu_alarme.style.opacity= -1;   
 
 
 });    
