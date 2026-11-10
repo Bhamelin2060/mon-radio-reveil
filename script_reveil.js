@@ -13,7 +13,9 @@ var yyyy = today.getFullYear();                         // Année actuelle
  var ss=0;
 // affiche l'heure courante toute les secondes:
 
-
+let Bouton2=document.getElementById("Bouton22");
+let Bouton3=document.getElementById("Bouton33");
+let menu_alarme=document.getElementById("Salarme");
 let tab_alarm_sel=[0,0,0,0,0,0,0]; // mise a zero des heures d'alarme du lundi au dimanche
 let tab_statut_alarm_sel=[0,0,0,0,0,0,0]; // mise a zero autorisation d'alarme du lundi au dimanche
 let tab_radio_alarm_sel=["","","","","","",""];
@@ -611,8 +613,17 @@ if (mn==0 && ss==0){  //    if (mn==0 && ss==0)  on est à l'heure pile
      }
      
      Taux_scale=1;
+//  ---- gestion du menu alarme -------------
+ Bouton2.addEventListener("click", () => {
+  menu_alarme.style.opacity= 1;     
 
-    	    
+});
+// fermeture du menu alarm
+    	Bouton3.addEventListener("click", () => {
+  menu_alarme.style.opacity= 0;   
+
+
+});    
 
  
 
