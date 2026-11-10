@@ -44,8 +44,8 @@ main {
 border:5px ridge #402040;
 background-color: rgb(41, 111, 137); 
  position:absolute;
-  top: 470px;
-    left: 520px;
+  top: 60px;
+    left: 120px;
     height: 51%;
     width: 50%;
 opacity:0;
