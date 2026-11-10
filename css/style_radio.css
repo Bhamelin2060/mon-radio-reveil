@@ -14,7 +14,7 @@
 --taille_chapitre_v: var(--taille_min2); 
 --taille_chapitre_h: var(--taille_min2);
 }
-:root{--Diam_Cadran:var(--taille_cadran);} 
+:root{--Diam_Cadran:var(0,6*--taille_cadran);} 
 
 body { /*desktop */
  /* display: flex;
@@ -41,18 +41,15 @@ main {
 }
  
 #Salarme{
-/*border:5px ridge #402040;
-background-color: rgb(41, 111, 137);*/
-  background-image: url("../images_radio/Ciel_etoile.jpg");
-   background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-         
-/*border:5px ridge #402040;
-background-color: rgb(41, 111, 137);*/
-height:101%;
-width: 60%;
-}	
+border:5px ridge #402040;
+background-color: rgb(41, 111, 137); 
+ position:absolute;
+  top: 470px;
+    left: 520px;
+    height: 51%;
+    width: 50%;
+opacity:0;
+}
 
  
 #sonnerie1{
@@ -73,13 +70,13 @@ flex-direction: row;
 align-items: center;
 }*/
 #Date_du_jour{
-font-size:4vw;;
+font-size:2vw;;
 color:blue;
 width:70%; 
 }
 
 #jour_sem{
-font-size:4vw;
+font-size:2vw;
 color:blue;
 }
 #Clock{
@@ -90,7 +87,7 @@ width: 100%;
 
 
  #HeureActuelle{
-    font-size:4vw;;
+    font-size:2vw;;
     color:blue;
 	width:37%;
   }
@@ -262,7 +259,70 @@ width:0.5*var(--taille_min);
 .text_invisible {
   visibility: hidden;
 }
+.Bouton2 {
+  background: linear-gradient(180deg, fuchsia, #9356DC 35%, #FF79DA 100%);
+  margin: 2%;
+  height: 40px;
+  width: 100px;
+  text-align: center;
+  border-radius: 25px;
+  border: none;
+  color: white;
+  font-family: "Roboto", "Arial", "sans-serif";
+  font-weight: bold;
+  font-size: 13px;
+  box-shadow: 5px 5px 10px #cccccc;
+  /*margin-top: 10px;
+  margin-bottom: 10px;*/
+  margin-right: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.Bouton2:hover {
+  background: linear-gradient(0deg, #9356DC, #FF79DA 35%, #8f2e8f 100%);
+}
+.Bouton2:active {
+  /*transform:scale(0.5);*/
+  transition: transform 50ms ease-in-out;
+  transform: scale(0.9);
+  background: linear-gradient(10deg, #30df79 0%, #30df79 35%, #30df79 100%);
+  background: linear-gradient(0deg, #9356DC, #FF79DA 905%, #8f2e8f 100%);
+}
+.Bouton3 {
+  background: linear-gradient(180deg, fuchsia, #9356DC 35%, #FF79DA 100%);
+  margin: 2%;
+  height: 40px;
+  width: 100px;
+  text-align: center;
+  border-radius: 25px;
+  border: none;
+  color: white;
+  font-family: "Roboto", "Arial", "sans-serif";
+  font-weight: bold;
+  font-size: 13px;
+  box-shadow: 5px 5px 10px #cccccc;
+  /*margin-top: 10px;
+  margin-bottom: 10px;*/
+  margin-right: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.Bouton3:hover {
+  background: linear-gradient(0deg, #9356DC, #FF79DA 35%, #8f2e8f 100%);
+}
+.Bouton3:active {
+  /*transform:scale(0.5);*/
+  transition: transform 50ms ease-in-out;
+  transform: scale(0.9);
+  background: linear-gradient(10deg, #30df79 0%, #30df79 35%, #30df79 100%);
+  background: linear-gradient(0deg, #9356DC, #FF79DA 905%, #8f2e8f 100%);
+}
 
+.text_invisible {
+  visibility: hidden;
+}
 
 
 #Fond_gris {
@@ -511,7 +571,7 @@ width:50vw;
   flex-wrap: wrap;
   flex-direction:row;
   align-items: center;
- /* width:50vw;*/
+   width:50vw; 
  height:5px;
 }
 
@@ -791,7 +851,7 @@ background-image:url("Ciel_etoile.jpg");
 }
 .Horloge{    /* remplace my form*/
 display:flex;
-width: 40%; 
+width: 100%; 
  
 justify-content: space-around;
 border:2px ridge #202040;
@@ -940,6 +1000,185 @@ input[type="range"]::-moz-range-thumb {
 }
 .control_Play_stop{
  height:30px;
+ width:30px;
+ background-color: rgb(95, 212, 3);
+ border-radius:15px ;
+ font-size: 100%;
+ margin-left: 2%; 
+ padding-bottom: 4px;
+box-shadow: 10px 10px 15px rgb(95, 75, 173);
+
+}
+.control_Play_stop:active{
+  box-shadow: 3px 3px 5px rgb(95, 75, 173);
+ transform: scale(0.8);
+}
+@supports not (color: color-mix(in srgb,red,red)) {
+  input {
+    --_c: var(--c);
+  } 
+}
+.SJour-sem{
+  display:flex;
+flex-direction: row;
+ margin-left: 10px;
+ margin-bottom: 20px;
+ justify-content: space-around;
+}
+.H_Alarm_sem{
+display:flex;
+flex-direction: row;
+ margin-left: 10px;
+justify-content: space-around;
+}
+.Radio_Alarm_sem{
+display:flex;
+flex-direction: row;
+ margin-left: 10px;
+ justify-content: space-around;
+
+}
+
+.heure_Alarm_j{
+font-size: 10px;
+width:40px;
+padding:0px;
+margin:2px;
+justify-content: space-between;
+}
+.jour_sem{
+height:30px;
+width:40px;
+font-size: 20px;
+text-align:center;
+background-color: rgb(158, 153, 153);
+}
+.Radio_Alarm_j{
+font-size: 10px;
+width:40px;
+padding:0px;
+margin:2px;
+
+}
+#RadioR{
+  font-size: 20px;
+}
+#RadioS{
+  font-size: 20px;
+}
+#audioPlayer{
+height:5vh;
+width:30vw;
+}
+/* Fin gestion partie horloge      */ 
+ @media (orientation: landscape)  /* ---------orientation horizontale --------------*/
+  {
+.timer{
+  display:flex;
+  flex-direction: column;
+   width: 100%;
+  height: 100%;
+}   
+
+.Bouton1{
+  height: 5vh;
+  width: 10vw; 
+}
+
+.list_R{   
+        
+        flex-direction: row;
+       
+        height: 0.5*var(--taille_min2);
+        width:0.5*var(--taille_min2);
+         /*   margin-right: 10px;
+    margin-bottom: 40px;*/
+       /* justify-content: flex-start;*/
+        justify-content: space-around;
+     
+}
+.zen {
+  
+        display: flex;
+        flex-direction: row;
+        height:100%;
+       
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+.Horloge{
+ 
+display: flex;
+align-items: center;
+height: 100%;
+width:99%;
+
+
+} 
+._sommaire{
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width:100%;
+  height:99%;
+  justify-content: space-around;
+}
+.Chapitre{
+  margin-left: auto;
+      height: var(--taille_min2);
+    width:  var(--taille_min2);
+    align-items: center;
+    
+}
+
+.Banniere_Image {
+    width: 100%;
+    height: 100%;
+}
+
+.ON_AIR{
+  flex-direction: row;
+  
+}
+.colonne_son {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+   
+     width: 20vw; 
+
+}    
+.son_controle{
+  flex-direction: row;
+   
+  align-items: center;
+  justify-content: space-around;
+    height:100%;
+}
+#source{
+  height:100%;
+  width:40vw;
+}
+#Btn_Cast{
+  width:10vw;
+}
+#audioPlayer{
+   margin-left: 20px; 
+  height: 50%;
+  align-items: center;
+  width:50%;  
+}
+.ligne{
+  width:100%;
+  height:50%
+}
+
+
+
+
+  }
+
  width:30px;
  background-color: rgb(95, 212, 3);
  border-radius:15px ;
