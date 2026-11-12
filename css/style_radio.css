@@ -1150,7 +1150,8 @@ width:99%;
       height: var(--taille_min2);
     width:  var(--taille_min2);
     align-items: center;
-    
+    /* overflow-y: scroll;*/
+        overflow-y: scroll;
 }
 
 .Banniere_Image {
