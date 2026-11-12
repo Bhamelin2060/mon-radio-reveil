@@ -1,18 +1,10 @@
 /* OUKIEL C18 PRO 1600 x 720 pc*/
-:root{--Diam_Cadran:500px;} 
+:root{--Diam_Cadran:50vw;}  /* 800px*/
 body {
-/*    display: flex;
-   flex-wrap:wrap;
-   flex-direction:column;
-    background-color: rgb(158, 165, 194);
-   border:1px red;	
-    color: #EEE;
-    font-family: 'Roboto Slab', serif;
-   height:20%;
-   width:100%;*/
+
    height:100vh;  
    width:100vw;
- /*padding:10px;*/
+ 
   }
 .header{ 
 
@@ -48,8 +40,9 @@ flex-direction:row;
 #Montre{
  
 
-width:var(--Diam_Cadran) ;
-height:var(--Diam_Cadran) ;
+width:Calc(var(--Diam_Cadran)*0.5);
+/*Calc(var(--Diam_Cadran)*0.1); */
+height:Calc(var(--Diam_Cadran)*0.5);
 border-radius:50%;
 flex-direction:column;
 padding:5px;
@@ -62,14 +55,14 @@ background-repeat: no-repeat;
 background-position: center center;
 background-size: cover;
 box-shadow: 5px 5px 0px 0px rgba(17, 126, 111, 0.2);
- 
+scale:2; 
 }
 /*-----------------Grange aiguille------------------------*/
 #G_aiguille{
 position:absolute;
-top:Calc(var(--Diam_Cadran)*0.1); 
-left:calc(var(--Diam_Cadran)*0.49); 
-height:calc(var(--Diam_Cadran)*0.54);
+top:Calc(var(--Diam_Cadran)*( 0.06)); 
+left:calc(var(--Diam_Cadran)*(0.255)); 
+height:calc(var(--Diam_Cadran)*(0.24));
 width:15px;
 transform-origin:50% 80%;
 rotate:00deg;
@@ -83,10 +76,10 @@ background-size: cover;
 /*-----------------Petite aiguille------------------------*/
 #P_aiguille{
 position:absolute;
-top:Calc(var(--Diam_Cadran)*0.24); 
-left:calc(var(--Diam_Cadran)*0.5); 
-height:calc(var(--Diam_Cadran)*0.45);
-width:15px;
+top:Calc(var(--Diam_Cadran)*0.09); 
+left:calc(var(--Diam_Cadran)*0.255); 
+height:calc(var(--Diam_Cadran)*0.23);
+width:27px;
 transform-origin:32% 68%;
 rotate:00deg;
 background-image: url("../images_reveil/Grande_Aiguille_SNCF.png");
@@ -99,9 +92,9 @@ background-size: cover;
 /*-----------------Trotteuse----------------------*/
 #Sec_aiguille{
  position:absolute;
-top:Calc(var(--Diam_Cadran)*0.21); 
-left:calc(var(--Diam_Cadran)*0.52); 
-height:calc(var(--Diam_Cadran)*0.40);
+top:Calc(var(--Diam_Cadran)*0.09); 
+left:calc(var(--Diam_Cadran)*0.26); 
+height:calc(var(--Diam_Cadran)*0.21);
 width:5px;
 transform-origin:50% 80%;
 rotate:00deg;
@@ -115,11 +108,11 @@ background-size: cover;
 }
 #Rond{
   position:absolute;
-  top:Calc(var(--Diam_Cadran)*0.48);/*+"px";  95px;*/
-  left:Calc(var(--Diam_Cadran)*0.48);/*+"px"; 5px;*/
+  top:Calc(var(--Diam_Cadran)*0.23);/*+"px";  95px;*/
+  left:Calc(var(--Diam_Cadran)*0.23);/*+"px"; 5px;*/
   z-index: 10;
-  width: Calc(var(--Diam_Cadran)*0.1);/*+"px";*/ 
-  height:Calc(var(--Diam_Cadran)*0.1);/*+"px";*/ 
+  width: Calc(var(--Diam_Cadran)*0.05);/*+"px";*/ 
+  height:Calc(var(--Diam_Cadran)*0.05);/*+"px";*/ 
   border-radius:50% 50% 50% 50%;
   border:1px ridge #F9FF18; /* RGB(0,100,255);*/
   background-color:#F9FF18;/* #F9FF18; */
@@ -160,10 +153,17 @@ background-color: #bad;
 display:flex;
 flex-direction:row;
 width: 100%;
+& p{
+  color:#0c0a00
+}
 }
 #Entete-Alarme{
   display: flex;
   align-items: center;
+ 
+  align-items: center;
+  background-image: url(../images_radio/texture-paper.png);
+  
 }
 .heure-alarm{
 color:#EEE;
@@ -265,12 +265,12 @@ height: 20%;
 .Bt_stop{
   position:relative;
   top:0px;
-  left:-20px;
- height:40px;
- width:40px;
+  left:-40px;
+ height:80px;
+ width:80px;
  background-color: rgb(197, 194, 169);
  border-radius:40px ;
- font-size: 20px;
+ font-size: 40px;
 
  /*margin-left: 0px;*/
 }
@@ -303,7 +303,7 @@ background-position: center center;
 background-size: cover;
 margin-left: 20px;
 &:active{
-transform:scale(0.8);
+transform:scale(0.9);
 }
 }
 .Big_ben{
@@ -314,7 +314,7 @@ background-position: center center;
 background-size: cover;
 margin-left: 20px;
 &:active{
-transform:scale(0.8);
+transform:scale(0.9);
 }
 }
 .Big_ben_T1{
@@ -423,7 +423,7 @@ box-shadow: 10px 10px 15px rgb(95, 75, 173);
  /*transform: scale(0.8);*/
 }
 select {
-    width: 70%;
+    width: 200px;
      
 }
 @supports not (color: color-mix(in srgb,red,red)) {
@@ -436,17 +436,18 @@ select {
 
 .Titre_alarm{
   display: flex;
-   align-items: flex-start;
-   &p{
-    font-size: 10vw;
- /*   &.LEFT{
-      margin-right:60% ;
-    }*/
-   }
+   justify-content: flex-start;
+   background-image: url(../images_radio/texture-paper.png);
+   width: 99%;
+   
 }
 .LEFT{
-      margin-right:60% ;
+      margin-right:25% ;
     }
+.Red{
+  color:rgb(75, 38, 226);
+}
+
 #Sleep{
   display: flex;
   flex-direction: row;
@@ -512,20 +513,20 @@ justify-content: space-around;
 }
 
 .heure_Alarm_j{
-font-size: 20px;
+font-size: 50px;
 /*width:20px;*/
 padding:0px;
 margin:2px;
 }
 .jour_sem{
-height:50px;
-width:60px;
-font-size: 30px;
+height:90px;
+width:90px;
+font-size: 50px;
 text-align:center;
 background-color: rgb(158, 153, 153);
 }
 .Radio_Alarm_j{
-font-size: 20px;
+font-size: 50px;
 width:40px;
 padding:0px;
 margin:2px;
@@ -545,16 +546,14 @@ p{
 }
 }
  .switch_alarm{
-  width: 80px;
-  height:40px;
-  border-radius: 20px;
+  width: 120px;
+  height:80px;
+  border-radius: 80px;
   background-color: #940909;
-  ;
  } 
 
 
-@media (orientation: landscape) 
-  {
+@media (orientation: landscape)  {
 #Champs_alarm{
 display:flex;
 flex-direction: row;
@@ -565,7 +564,13 @@ align-items: center;
 color:cadetblue;
 font-size: larger;
 p{
-  font-size: 20px;
+  font-size: 50px;
 }
 }
-  }
+#Montre{
+transform:scale(0.5);
+}
+
+}
+
+  
