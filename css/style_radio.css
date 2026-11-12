@@ -60,9 +60,9 @@ border:5px ridge #402040;
 background-color: rgb(41, 111, 137); 
  position:absolute;
   top: 20vh;
-    left: 30vw;
+    left: 15vw;
     height: 40vh; 
-    width: 40vw;
+    width: 60vw;
     z-index: -1;
 
 }
