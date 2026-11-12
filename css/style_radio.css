@@ -1204,10 +1204,11 @@ width:99%;
     height: 50vh; 
     width: 90vw;
     z-index: -1;
-	transform: scale(0.5);
+	transform: scaleY(0.5);
 	&p{
 		font-size:10px;
 	}
+	transform: scaleX(0.6);
 }
 
 
