@@ -1196,10 +1196,14 @@ width:99%;
 #Salarme{
 
   top: 30vh;
-    left: 30vw;
+    left: 10vw;
     height: 50vh; 
-    width: 50vw;
+    width: 90vw;
     z-index: -1;
+	transform: scale(0.5);
+	&p{
+		font-size:10px;
+	}
 }
 
 
