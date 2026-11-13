@@ -265,12 +265,12 @@ height: 20%;
 .Bt_stop {
   position: relative;
   top: 0px;
-  left: -40px;
-  height: 5vh;
-  width: 5vh;
+  left: -20px;
+  height: 80px;
+  width: 80px;
   background-color: rgb(197, 194, 169);
-  border-radius: 2.5vh;
-  font-size: 2.5vh;
+  border-radius: 40px;
+  font-size: 2vw;
 
  /*margin-left: 0px;*/
 }
@@ -517,23 +517,24 @@ justify-content: space-around;
 }
 
 .heure_Alarm_j{
-font-size: 20px;
-/*width:20px;*/
-padding:0px;
-margin:2px;
+.heure_Alarm_j {
+  font-size: 3vw;
+  width: 20px;
+  padding: 0px;
+  margin: 2px;
 }
-.jour_sem{
-height:90px;
-width:90px;
-font-size: 20px;
-text-align:center;
-background-color: rgb(158, 153, 153);
+.jour_sem {
+  height: 90px;
+  width: 90px;
+  font-size: 2vw;
+  text-align: center;
+  background-color: rgb(158, 153, 153);
 }
-.Radio_Alarm_j{
-font-size: 20px;
-width:40px;
-padding:0px;
-margin:2px;
+.heure_Alarm_j {
+  font-size: 3vw;
+  width: 20px;
+  padding: 0px;
+  margin: 2px;
 
 }
 #Champs_alarm{
@@ -549,13 +550,11 @@ p{
   font-size: 20px;
 }
 }
- .switch_alarm{
-  .switch_alarm {   
+ .switch_alarm {   
   width: 8vh;
   height: 80px;
   border-radius: 4vh;
   background-color: #940909;
- } 
 
 
 @media (orientation: landscape)  {
