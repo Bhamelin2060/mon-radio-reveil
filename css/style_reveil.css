@@ -262,15 +262,15 @@ justify-content: space-around;
 height: 20%;
 }	
 
-.Bt_stop{
-  position:relative;
-  top:0px;
-  left:-20px;
- height:80px;
- width:80px;
- background-color: rgb(197, 194, 169);
- border-radius:40px ;
- font-size: 40px;
+.Bt_stop {
+  position: relative;
+  top: 0px;
+  left: -40px;
+  height: 5vh;
+  width: 5vh;
+  background-color: rgb(197, 194, 169);
+  border-radius: 2.5vh;
+  font-size: 2.5vh;
 
  /*margin-left: 0px;*/
 }
@@ -550,9 +550,10 @@ p{
 }
 }
  .switch_alarm{
-  width: 120px;
-  height:80px;
-  border-radius: 80px;
+  .switch_alarm {   
+  width: 8vh;
+  height: 80px;
+  border-radius: 4vh;
   background-color: #940909;
  } 
 
