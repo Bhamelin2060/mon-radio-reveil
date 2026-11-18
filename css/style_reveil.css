@@ -60,11 +60,11 @@ scale:2;
 /*-----------------Grange aiguille------------------------*/
 #G_aiguille{
 position:absolute;
-top:Calc(var(--Diam_Cadran)*( 0.06)); 
-left:calc(var(--Diam_Cadran)*(0.255)); 
+top:Calc(var(--Diam_Cadran)*( 0.08)); 
+left:calc(var(--Diam_Cadran)*(0.245)); 
 height:calc(var(--Diam_Cadran)*(0.24));
 width:15px;
-transform-origin:50% 80%;
+transform-origin:42% 82%;
 rotate:00deg;
 background-image: url("../images_reveil/Grande_Aiguille_SNCF.png");
 background-repeat: no-repeat;
