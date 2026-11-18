@@ -77,8 +77,8 @@ background-size: cover;
 #P_aiguille{
 position:absolute;
 top:Calc(var(--Diam_Cadran)*0.15); 
-left:calc(var(--Diam_Cadran)*0.26); 
-height:calc(var(--Diam_Cadran)*0.20);
+left:calc(var(--Diam_Cadran)*0.2); 
+height:calc(var(--Diam_Cadran)*0.18);
 width:27px;
 transform-origin:32% 68%;
 rotate:00deg;
