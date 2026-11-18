@@ -76,7 +76,7 @@ background-size: cover;
 /*-----------------Petite aiguille------------------------*/
 #P_aiguille{
 position:absolute;
-top:Calc(var(--Diam_Cadran)*0.15); 
+top:Calc(var(--Diam_Cadran)*0.13); 
 left:calc(var(--Diam_Cadran)*0.2); 
 height:calc(var(--Diam_Cadran)*0.18);
 width:27px;
