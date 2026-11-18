@@ -80,7 +80,7 @@ top:Calc(var(--Diam_Cadran)*0.15);
 left:calc(var(--Diam_Cadran)*0.2); 
 height:calc(var(--Diam_Cadran)*0.18);
 width:27px;
-transform-origin:32% 68%;
+transform-origin:20% 65%;
 rotate:00deg;
 background-image: url("../images_reveil/Grande_Aiguille_SNCF.png");
 background-repeat: no-repeat;
