@@ -344,7 +344,7 @@ input {
   --c: rgb(108, 111, 153); /* active color */
   --l: 8px; /* line thickness*/
   --h: 40px; /* thumb height */
-  --w: 20px; /* thumb width */
+  --w: 40px; /* thumb width */
    
   width: 100%;  /* largeur champs date de reveil */
   height: var(--h); /* needed for Firefox*/
