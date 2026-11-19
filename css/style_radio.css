@@ -13,10 +13,10 @@
  
 --taille_chapitre_v: var(--taille_min2); 
 --taille_chapitre_h: var(--taille_min2);
---larg_salarme_land: 20vw;
---long_salarme_land: 20vh;
---larg_salarme_vert: 20vw;
---long_salarme_vert: 20vh;
+--larg_salarme_land: 40vw;
+--haut_salarme_land: 40vw;
+--larg_salarme_vert: 60vw;
+--haut_salarme_vert: 60vw;
 
 }
 :root{--Diam_Cadran:var(0,6*--taille_cadran);} 
@@ -60,10 +60,11 @@ border:5px ridge #402040;
 background-color: rgb(41, 111, 137); 
  position:absolute;
   top: 20vh;
-    left: 15vw;
-    height: 60vh; 
-    width: 60vw;
+    left: 20vw;
+    height:var(--haut_salarme_vert);
+    width:var(--larg_salarme_vert);
     z-index: -1;
+   /*transform: scaleX(1.6);*/
 
 }
 
@@ -237,6 +238,7 @@ width:0.5*var(--taille_min);
   margin: 0%;
   height: 100%;
   align-items: center;
+  flex-grow: 2;
 }
 
 */
@@ -310,8 +312,8 @@ width:0.5*var(--taille_min);
 .Bouton3 {
   background: linear-gradient(180deg, fuchsia, #9356DC 35%, #FF79DA 100%);
  
-  height: 20px;
-  width: 100px;
+ height: 2vh;
+    width: 10vw;
   text-align: center;
   border-radius: 25px;
   border: none;
@@ -563,6 +565,7 @@ display:flex;
 flex-direction: row; 
 justify-content: space-around;
 align-items: center;
+flex-grow: 2;
 
 }
  .colonne_son{
@@ -666,8 +669,7 @@ background-image:c ;
    background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-	 
-	 /* overflow-y: scroll;*/
+       /* overflow-y: scroll;*/
         overflow-y: scroll;
 } /* Fin css sommaire */
 
@@ -835,7 +837,7 @@ header {
   color: white;
   font-family: "Roboto", "Arial", "sans-serif";
   font-weight: bold;
-  font-size: 2vw;
+  font-size: 45px;
   box-shadow: 5px 5px 10px #cccccc;
   /*margin-top: 10px;
   margin-bottom: 10px;*/
@@ -946,7 +948,7 @@ padding: 10px;
   display:flex;
   flex-direction: column;
   width:100%;
-  height:50%;
+  height:100%;
 }   
 /* ------------gestion curseur -----------*/
 input {
@@ -1079,7 +1081,7 @@ margin:2px;
 
 }
 #RadioR{
-  font-size: 2vw;
+  font-size: 40px;
 }
 #RadioS{
   font-size: 40px;
@@ -1144,14 +1146,13 @@ width:99%;
   width:100%;
   height:99%;
   justify-content: space-around;
-  overflow: scroll;
 }
 .Chapitre{
   margin-left: auto;
       height: var(--taille_min2);
     width:  var(--taille_min2);
     align-items: center;
-   
+    
 }
 
 .Banniere_Image {
@@ -1198,14 +1199,15 @@ width:99%;
   height:50%
 }
 #Salarme{
-@media (orientation: landscape) {
-  #Salarme {
-    top: 10vh;
-    left: 10vw;
-    height: 50vh;
-    width: 60vw;
+
+  top: 10vh;
+    left: 20vw;
+    height:var(--haut_salarme_land); 
+    width: var(--larg_salarme_land);
     z-index: -1;
-    transform: scaleY(1);
+   /* transform: scaleX(0.9);*/
+
+}
 
 
   }

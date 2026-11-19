@@ -28,7 +28,7 @@ height:50%;
 align-items: flex-start;
 }
 p{
-font-size: 2vh;
+font-size: 2vw;
 padding:5px;
 margin:5px;
 color: #F9FF18;
@@ -55,16 +55,16 @@ background-repeat: no-repeat;
 background-position: center center;
 background-size: cover;
 box-shadow: 5px 5px 0px 0px rgba(17, 126, 111, 0.2);
-scale:1; 
+scale:2; 
 }
 /*-----------------Grange aiguille------------------------*/
 #G_aiguille{
 position:absolute;
-top:Calc(var(--Diam_Cadran)*( 0.08)); 
-left:calc(var(--Diam_Cadran)*(0.245)); 
+top:Calc(var(--Diam_Cadran)*( 0.06)); 
+left:calc(var(--Diam_Cadran)*(0.255)); 
 height:calc(var(--Diam_Cadran)*(0.24));
 width:15px;
-transform-origin:42% 82%;
+transform-origin:50% 80%;
 rotate:00deg;
 background-image: url("../images_reveil/Grande_Aiguille_SNCF.png");
 background-repeat: no-repeat;
@@ -76,11 +76,11 @@ background-size: cover;
 /*-----------------Petite aiguille------------------------*/
 #P_aiguille{
 position:absolute;
-top:Calc(var(--Diam_Cadran)*0.13); 
-left:calc(var(--Diam_Cadran)*0.2); 
-height:calc(var(--Diam_Cadran)*0.18);
+top:Calc(var(--Diam_Cadran)*0.10); 
+left:calc(var(--Diam_Cadran)*0.255); 
+height:calc(var(--Diam_Cadran)*0.23);
 width:27px;
-transform-origin:20% 65%;
+transform-origin:32% 68%;
 rotate:00deg;
 background-image: url("../images_reveil/Grande_Aiguille_SNCF.png");
 background-repeat: no-repeat;
@@ -262,15 +262,15 @@ justify-content: space-around;
 height: 20%;
 }	
 
-.Bt_stop {
-  position: relative;
-  top: 0px;
-  left: -20px;
-  height: 80px;
-  width: 80px;
-  background-color: rgb(197, 194, 169);
-  border-radius: 40px;
-  font-size: 2vw;
+.Bt_stop{
+  position:relative;
+  top:0px;
+  left:-40px;
+ height:80px;
+ width:80px;
+ background-color: rgb(197, 194, 169);
+ border-radius:40px ;
+ font-size: 40px;
 
  /*margin-left: 0px;*/
 }
@@ -335,9 +335,9 @@ background-repeat: no-repeat;
 background-position: center center;
 background-size: cover;
 margin-left: 20px;
-&:active{
+/*&:active{
 transform:scale(0.8);
-}
+}*/
 }
 /* ------------gestion curseur -----------*/
 input {
@@ -465,11 +465,11 @@ padding-right: 5px;
 text-align: center;
 }
 .push{
-  height:40px;
+  height:2vh;
   font-size: large;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  width:40px;
-  border-radius: 20px;
+  width:2vh;
+  border-radius: 1vh;
   align-content: center;
   background-color: cadetblue;
 }
@@ -517,24 +517,23 @@ justify-content: space-around;
 }
 
 .heure_Alarm_j{
-.heure_Alarm_j {
-  font-size: 3vw;
-  width: 20px;
-  padding: 0px;
-  margin: 2px;
+font-size: 1.5vw;
+/*width:20px;*/
+padding:0px;
+margin:2px;
 }
-.jour_sem {
-  height: 90px;
-  width: 90px;
-  font-size: 2vw;
-  text-align: center;
-  background-color: rgb(158, 153, 153);
+.jour_sem{
+height: 5vh;
+    width: 5vh;
+    font-size: 51px;
+text-align:center;
+background-color: rgb(158, 153, 153);
 }
-.heure_Alarm_j {
-  font-size: 3vw;
-  width: 20px;
-  padding: 0px;
-  margin: 2px;
+.Radio_Alarm_j{
+font-size: 1vw;
+width:40px;
+padding:0px;
+margin:2px;
 
 }
 #Champs_alarm{
@@ -547,15 +546,16 @@ align-items: center;
 color:cadetblue;
 font-size: larger;
 p{
-  font-size: 20px;
+  font-size: 3vw;
 }
 }
- .switch_alarm {   
-  width: 8vh;
-  height: 80px;
-  border-radius: 4vh;
+ .switch_alarm{
+  width: 120px;
+  height:80px;
+  border-radius: 80px;
   background-color: #940909;
- }
+ } 
+
 
 @media (orientation: landscape)  {
 #Champs_alarm{
@@ -568,7 +568,7 @@ align-items: center;
 color:cadetblue;
 font-size: larger;
 p{
-  font-size: 1.50vw;
+  font-size: 3vw;
 }
 }
 #Montre{
