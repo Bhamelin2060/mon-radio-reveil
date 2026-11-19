@@ -6,42 +6,65 @@
     <meta charset="utf-8">
     <meta name="keywords" content="seo, google, site web, site internet, Ma radio, Ma radio">
     <meta name="description" content="Ma radio.">
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=0.6, viewport-fit=cover">
  
 	<link rel="stylesheet" href="./css/style_radio.css"/>
 	 <link rel="stylesheet" href="./css/style_reveil.css"/>
 
      
-	<link href="https://www.dafontfree.net/embed/dmFnLXJvdW5kZWQtcmVndWxhciZkYXRhLzUwL3YvMjgxMzAvVkFHUm91bmRlZEJULVJlZ3VsYXIub3Rm" rel="stylesheet" type="text/css"/>
+	<!--<link href="https://www.dafontfree.net/embed/dmFnLXJvdW5kZWQtcmVndWxhciZkYXRhLzUwL3YvMjgxMzAvVkFHUm91bmRlZEJULVJlZ3VsYXIub3Rm" rel="stylesheet" type="text/css"/> -->
     
       <script src="https://kit.fontawesome.com/ef57fd2157.js" crossorigin="anonymous"></script>  <!-- lien des icones https://fontawesome.com/kits/ef57fd2157/setup-->
       <script src="https://kit.fontawesome.com/792ccd00ce.js" crossorigin="anonymous"></script> <!-- lien des icones https://fontawesome.com/kits/792ccd00ce/setup-->
    
-	<title>Ma Radio v12! </title>       <!-- CORRECTION DU TITRE-->
+	<title>Ma Radio v13! </title>       <!-- CORRECTION DU TITRE-->
 </head>
 
 <body>
     <div class="Couverture_ext">
-        <div class="Couverture_int sommaire"> 
-            <header>
-                <nav class="Entete">
-                    <div class="droite"> 
+    <div class="Couverture_int sommaire"> 
+   
+     <main class="zen"> 
+    <section id="Entete_Montre">
+        <header>
+    <nav class="Entete">
+    <div class="droite"> 
              
-                        <img src="images_radio/Poste_radio_T.gif" class="center-block image-resize-mode" width="80" height="80" alt=Poste radio, agence web paris, création poste de radio />
+                    <img src="images_radio/Poste_radio_T.gif" class="center-block image-resize-mode" width="90" height="90" alt=Poste radio, agence web paris, création poste de radio />
                     <section id="Clock">
-                    <p id="jour_sem"></p>
-                    <p id="Date_du_jour"></p>
-                    <p id="HeureActuelle"></p>
-                </section>
- 	            <a href="https://www.google.fr/">
+                        <p id="jour_sem"></p>
+                        <p id="Date_du_jour"></p>
+                        <p id="HeureActuelle"></p>
+                    </section>
+ 	                <a href="https://www.google.fr/">
                             <button class="Bouton1" onclick="self.close()"> OFF</button>
-                        </a>
-                    </div> <!-- fin div class droite-->
+                    </a>
+                </div> <!-- fin div class droite-->
        
                 </nav>
-            </header>    
-     <main class="zen">  
+            </header>
+    <section id="fond_montre" class="timer">
+    <div Class="Horloge"> <!-- gestion de l'horloge -->
+    
+	    <div id="Montre" class="Montres"> <!--ID montre -->
+		    <div id="Cadran"> </div>
+		    <div id="Rond"> </div>
+		    <div id="G_aiguille"> </div>
+		    <div id="P_aiguille"> </div>
+		    <div id="Sec_aiguille"> </div>
+	    </div>                           <!--Fin ID montre -->
+ 
+    </div> <!-- fin gestion de l'horloge -->
+
+</section>
+   
+      
+<!------------------------------- Initialisation timing sleep ----------------------------------->
+</section>
+
         <div class="_sommaire">
+
+
         <div id="généraliste" class="list_R"> <!--  section radio généralistes -->
         <div class="Chapitre" id="RTL">      <!--premier Chapitre 1¨réaùbule-->
             <a class="nounderline" >  
@@ -176,27 +199,10 @@
 
         </div> <!--fin section Radios jazz-->
         </div> <!-- fin sommaire des radios-->
-<section id="fond_montre" class="timer">
-    <div Class="Horloge"> <!-- gestion de l'horloge -->
-    
-	    <div id="Montre" class="Montres"> <!--ID montre -->
-		    <div id="Cadran"> </div>
-		    <div id="Rond"> </div>
-		    <div id="G_aiguille"> </div>
-		    <div id="P_aiguille"> </div>
-		    <div id="Sec_aiguille"> </div>
-	    </div>                           <!--Fin ID montre -->
- 
-    </div> <!-- fin gestion de l'horloge -->
-
-
-   
-      
-<!------------------------------- Initialisation timing sleep ----------------------------------->
 
 <section id="Salarme">
     <section Id="Entete-Alarme">
-    <p class="Titre_alarm LEFT"> Choix radio sommeil</p>
+    <p class="Titre_alarm LEFT Red"> Choix radio sommeil</p>
      <button id="Bouton33" class="Bouton3" > Quitter </button>
      </section>
 	<div id="Champs_alarm">
@@ -238,7 +244,7 @@
 </div>
 
 <!-- Initialisation section réveil --> 
- <p class="Titre_alarm LEFT"> Choix radio Reveil</p>
+ <p class="Titre_alarm LEFT Red"> Choix radio Reveil</p>
 		<div class="cph2">
 				
     			
@@ -261,7 +267,7 @@
 		<div class="switch_alarm" id="Aswitch">
 	
 		<button class="Bt_stop" id="BoutonALoff">Off</button>
-		</div>
+         </div> 
 	</div>
 	<section class="SJour-sem">
 		<button class="jour_sem" id="Di">Di</button>
@@ -293,8 +299,9 @@
 		<p class="Radio_Alarm_j" id="R_Sa">Sa</p>
 		
 	 </section> 
+      
  </section>
-    </main>
+   </main>
     <footer>
   
    <div  class="footer_chapitre">
@@ -339,6 +346,6 @@
  
 </div>
  </div><!-- fin class couverture_int sommaire-->
-</body>
+ </body>
 </html>
 <!--gestion souris par surseur: https://lndev.me/articles/creer-un-curseur-personnalise-->
