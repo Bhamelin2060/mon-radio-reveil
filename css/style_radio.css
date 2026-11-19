@@ -282,7 +282,7 @@ width:0.5*var(--taille_min);
 .Bouton2 {
   background: linear-gradient(180deg, fuchsia, #9356DC 35%, #FF79DA 100%);
   margin: 2%;
-  height: 40px;
+  height: 80px;
   width: 100px;
   text-align: center;
   border-radius: 25px;
