@@ -28,7 +28,7 @@ height:50%;
 align-items: flex-start;
 }
 p{
-font-size: 2vw;
+font-size: 2vh;
 padding:5px;
 margin:5px;
 color: #F9FF18;
@@ -40,9 +40,9 @@ flex-direction:row;
 #Montre{
  
 
-width:Calc(var(--Diam_Cadran));
+width:Calc(var(--Diam_Cadran)*0.5);
 /*Calc(var(--Diam_Cadran)*0.1); */
-height:Calc(var(--Diam_Cadran));
+height:Calc(var(--Diam_Cadran)*0.5);
 border-radius:50%;
 flex-direction:column;
 padding:5px;
@@ -55,7 +55,7 @@ background-repeat: no-repeat;
 background-position: center center;
 background-size: cover;
 box-shadow: 5px 5px 0px 0px rgba(17, 126, 111, 0.2);
-scale:1; 
+scale:2; 
 }
 /*-----------------Grange aiguille------------------------*/
 #G_aiguille{
@@ -76,7 +76,7 @@ background-size: cover;
 /*-----------------Petite aiguille------------------------*/
 #P_aiguille{
 position:absolute;
-top:Calc(var(--Diam_Cadran)*0.10); 
+top:Calc(var(--Diam_Cadran)*0.09); 
 left:calc(var(--Diam_Cadran)*0.255); 
 height:calc(var(--Diam_Cadran)*0.23);
 width:27px;
@@ -262,15 +262,15 @@ justify-content: space-around;
 height: 20%;
 }	
 
-.Bt_stop{
-  position:relative;
-  top:0px;
-  left:-40px;
- height:80px;
- width:80px;
- background-color: rgb(197, 194, 169);
- border-radius:40px ;
- font-size: 40px;
+.Bt_stop {
+  position: relative;
+  top: 0px;
+  left: -20px;
+  height: 80px;
+  width: 80px;
+  background-color: rgb(197, 194, 169);
+  border-radius: 40px;
+  font-size: 2vw;
 
  /*margin-left: 0px;*/
 }
@@ -335,16 +335,16 @@ background-repeat: no-repeat;
 background-position: center center;
 background-size: cover;
 margin-left: 20px;
-/*&:active{
+&:active{
 transform:scale(0.8);
-}*/
+}
 }
 /* ------------gestion curseur -----------*/
 input {
   --c: rgb(108, 111, 153); /* active color */
   --l: 8px; /* line thickness*/
   --h: 40px; /* thumb height */
-  --w: 40px; /* thumb width */
+  --w: 20px; /* thumb width */
    
   width: 100%;  /* largeur champs date de reveil */
   height: var(--h); /* needed for Firefox*/
@@ -465,11 +465,11 @@ padding-right: 5px;
 text-align: center;
 }
 .push{
-  height:4vh;
+  height:40px;
   font-size: large;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  width:4vh;
-  border-radius: 2vh;
+  width:40px;
+  border-radius: 20px;
   align-content: center;
   background-color: cadetblue;
 }
@@ -516,24 +516,25 @@ flex-direction: row;
 justify-content: space-around;
 }
 
-.heure_Alarm_j{
-font-size: 1.5vw;
-/*width:20px;*/
-padding:0px;
-margin:2px;
+
+.heure_Alarm_j {
+  font-size: 3vw;
+  width: 20px;
+  padding: 0px;
+  margin: 2px;
 }
-.jour_sem{
-height: 5vh;
-    width: 5vh;
-    font-size: 51px;
-text-align:center;
-background-color: rgb(158, 153, 153);
+.jour_sem {
+  height: 90px;
+  width: 90px;
+  font-size: 2vw;
+  text-align: center;
+  background-color: rgb(158, 153, 153);
 }
-.Radio_Alarm_j{
-font-size: 1vw;
-width:40px;
-padding:0px;
-margin:2px;
+.heure_Alarm_j {
+  font-size: 3vw;
+  width: 20px;
+  padding: 0px;
+  margin: 2px;
 
 }
 #Champs_alarm{
@@ -546,16 +547,15 @@ align-items: center;
 color:cadetblue;
 font-size: larger;
 p{
-  font-size: 3vw;
+  font-size: 20px;
 }
 }
- .switch_alarm{
-  width: 120px;
-  height:80px;
-  border-radius: 80px;
+ .switch_alarm {   
+  width: 8vh;
+  height: 80px;
+  border-radius: 4vh;
   background-color: #940909;
- } 
-
+ }
 
 @media (orientation: landscape)  {
 #Champs_alarm{
@@ -567,14 +567,86 @@ justify-content: space-around;
 align-items: center;
 color:cadetblue;
 font-size: larger;
+}
 p{
-  font-size: 1.5vw;
+  font-size: 1.50vw;
 }
-}
+
 #Montre{
-transform:scale(1);
+    width: Calc(var(--Diam_Cadran)*0.5 );
+    height: Calc(var(--Diam_Cadran)*0.5 );
+    border-radius: 50%;
+    flex-direction: column;
+    padding: 5px;
+    border: 2px ridge #202040;
+    background-image: url(../images_reveil/Horloge_SNCF.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    box-shadow: 5px 5px 0px 0px rgba(17, 126, 111, 0.2);
+    scale: 2;
+}
+#Rond{
+  position:absolute;
+ /* top:Calc(var(--Diam_Cadran)*0.48);/*+"px";  95px;*/
+  /*left:Calc(var(--Diam_Cadran)*0.48);/*+"px"; 5px;*/
+  z-index: 10;
+  width: Calc(var(--Diam_Cadran)*0.05);/*+"px";*/ 
+  height:Calc(var(--Diam_Cadran)*0.05);/*+"px";*/ 
+  border-radius:50% 50% 50% 50%;
+  border:1px ridge #F9FF18; /* RGB(0,100,255);*/
+  background-color:#F9FF18;/* #F9FF18; */
+  transform-origin:50% 90%;
+  }
+/*-----------------Grange aiguille------------------------*/
+#G_aiguille{
+position:absolute;
+/*top:Calc(var(--Diam_Cadran)*( 0.15)); 
+left:calc(var(--Diam_Cadran)*(0.5)); 
+height:calc(var(--Diam_Cadran)*(0.44));*/
+width:15px;
+transform-origin:50% 80%;
+rotate:00deg;
+background-image: url("../images_reveil/Grande_Aiguille_SNCF.png");
+background-repeat: no-repeat;
+background-position: center; 
+background-size: cover;
+/*box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);*/
 }
 
+/*-----------------Petite aiguille------------------------*/
+#P_aiguille{
+position:absolute;
+/*top:Calc(var(--Diam_Cadran)*0.35); 
+left:calc(var(--Diam_Cadran)*0.45); 
+height:calc(var(--Diam_Cadran)*0.18);*/
+width:27px;
+/*transform-origin:50% 99%;*/
+rotate:00deg;
+background-image: url("../images_reveil/Grande_Aiguille_SNCF.png");
+background-repeat: no-repeat;
+background-position: center; 
+background-size: cover;
+/*box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2); */
+ 
+}
+/*-----------------Trotteuse----------------------*/
+#Sec_aiguille{
+ position:absolute;
+/*top:Calc(var(--Diam_Cadran)*0.1); 
+left:calc(var(--Diam_Cadran)*0.5); 
+height:calc(var(--Diam_Cadran)*0.41);
+width:5px;
+transform-origin:50% 99%;*/
+rotate:00deg;
+background-image: url("../images_reveil/Trotteuse_SNCF.png");
+ background-repeat: no-repeat;
+background-position: center; 
+background-size: cover;
+/* box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2); */
+
+
+}
 }
 
-  
+
