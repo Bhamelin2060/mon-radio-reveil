@@ -189,9 +189,10 @@ Durée_moins.addEventListener("click",(e)=>{
       Son.src = trackUrl_s;
          //  document.getElementById("Nom_Radio").innerText="Vous écoutez RMC";
             // On lit le track
+	    Durée_SLEEP.innerText= 100000;
            ///// Son.src = trackUrl_s;
            initAudio (trackUrl_s)
-           //Durée_SLEEP.innerText= 100000;
+          
            //// Son.load()
           /////  Son.play();    
    })
